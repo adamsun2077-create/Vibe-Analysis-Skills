@@ -1,0 +1,16 @@
+# System
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 大型公开数据集（见 _其他/README.md 获取下载方式）
+projects/ep01-ai-job-market/原始资料/_其他/

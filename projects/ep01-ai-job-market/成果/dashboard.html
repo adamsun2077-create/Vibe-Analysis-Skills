@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 冲击中国职业市场</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+    background: #fdf8f3;
+    color: #2d2416;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 32px 64px;
+  }
+
+  /* ── Header ── */
+  .header {
+    margin-bottom: 44px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #e8ddd0;
+  }
+  .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    color: #b06020; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .header h1 {
+    font-size: 28px; font-weight: 800; color: #1a0f00;
+    line-height: 1.2; margin-bottom: 10px;
+  }
+  .header-meta { font-size: 12px; color: #a09070; margin-bottom: 14px; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px; padding: 3px 10px; border-radius: 3px;
+    border: 1px solid #ddd0bc; color: #8a6840; background: #fff8f0;
+  }
+
+  /* ── Finding block ── */
+  .finding { margin-bottom: 40px; }
+  .finding-eyebrow {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+    color: #b06020; text-transform: uppercase; margin-bottom: 6px;
+  }
+  .finding-title {
+    font-size: 20px; font-weight: 800; color: #1a0f00;
+    line-height: 1.25; margin-bottom: 6px;
+  }
+  .finding-desc {
+    font-size: 12px; color: #7a6850; line-height: 1.65;
+    margin-bottom: 16px; max-width: 720px;
+  }
+  .finding-desc strong { color: #3a2010; }
+
+  /* ── Card ── */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 6px rgba(160,120,60,0.09);
+    border: 1px solid #f0e8dc;
+  }
+  .card-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.10em;
+    color: #c0a880; text-transform: uppercase; margin-bottom: 12px;
+  }
+
+  /* ── Two-up grid ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  /* ── Divergence table ── */
+  .div-section-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.10em;
+    text-transform: uppercase; padding: 8px 0 6px;
+    border-top: 1px solid #f0e8dc; margin-top: 8px;
+  }
+  .div-section-label.blue { color: #4a72bf; }
+  .div-section-label.orange { color: #b06020; }
+  .div-section-label:first-of-type { border-top: none; margin-top: 0; }
+
+  .div-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .div-table th {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #b8a080;
+    padding: 4px 6px; text-align: left;
+  }
+  .div-table th.c { text-align: center; }
+  .div-table td { padding: 7px 6px; border-bottom: 1px solid #f5ede4; }
+  .div-table tr:last-child td { border-bottom: none; }
+  .t-name { color: #2d2416; font-weight: 500; white-space: nowrap; }
+  .t-cn { color: #c8621a; font-weight: 700; text-align: center; white-space: nowrap; }
+  .t-ant { color: #4a72bf; font-weight: 700; text-align: center; white-space: nowrap; }
+  .t-delta { font-weight: 700; text-align: center; white-space: nowrap; }
+  .up { color: #2a7a2a; }
+  .dn { color: #c8621a; }
+  .t-note { font-size: 11px; color: #9e8870; }
+
+  /* ── Callout ── */
+  .callout {
+    background: #fff8f0; border-left: 3px solid #d8905a;
+    padding: 8px 12px; margin-top: 14px;
+    font-size: 11px; color: #6a4820; line-height: 1.65;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout strong { color: #3a1a00; }
+
+  /* ── Scatter note ── */
+  .chart-note {
+    font-size: 11px; color: #9e8870; margin-top: 8px; line-height: 1.5;
+  }
+
+  /* ── Impact bars ── */
+  .bar-row { margin-bottom: 9px; }
+  .bar-meta {
+    display: flex; justify-content: space-between;
+    align-items: baseline; margin-bottom: 3px;
+  }
+  .bar-name { font-size: 12.5px; color: #5a4030; }
+  .bar-name.h { font-weight: 700; color: #1a0f00; }
+  .bar-sub { font-size: 10px; color: #b8a080; margin-top: 1px; }
+  .bar-right { text-align: right; }
+  .bar-val { font-size: 12.5px; font-weight: 700; color: #c8621a; }
+  .bar-track { height: 7px; background: #f0e8dc; border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; background: #ddb070; }
+  .bar-fill.h { background: #c8621a; }
+
+  /* ── Consensus grid ── */
+  .consensus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .consensus-item {
+    font-size: 12px; padding: 7px 10px;
+    background: #fdf0e4; border-radius: 5px;
+    color: #6b3a0a; border: 1px solid #e8d0b0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* ── Employment stacked bar ── */
+  .stack-wrap { margin-bottom: 14px; }
+  .stack-bar {
+    display: flex; height: 12px; border-radius: 4px; overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .stack-seg { height: 100%; }
+  .stack-legend {
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 11px; color: #7a6850;
+  }
+  .legend-dot {
+    width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0;
+  }
+
+  /* ── Employment rows ── */
+  .emp-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 9px 0; border-bottom: 1px solid #f5ede4;
+  }
+  .emp-row:last-child { border-bottom: none; }
+  .emp-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .emp-label { flex: 1; }
+  .emp-title { font-size: 12.5px; font-weight: 600; color: #2d2416; }
+  .emp-desc { font-size: 10.5px; color: #a09070; }
+  .emp-num { font-size: 16px; font-weight: 800; color: #c8621a; white-space: nowrap; width: 72px; text-align: right; }
+  .emp-pct { font-size: 11px; color: #a09070; width: 28px; text-align: right; }
+
+  /* ── Footer ── */
+  .footer {
+    font-size: 10px; color: #b8a890;
+    border-top: 1px solid #e8ddd0; padding-top: 16px;
+    margin-top: 8px; line-height: 1.9;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="header">
+  <div class="eyebrow">数据实证报告 · 2026-03-22</div>
+  <h1>AI 冲击中国职业市场</h1>
+  <p class="header-meta">中国 LLM 暴露指数 &times; 《中国劳动统计年鉴 2024》&times; Anthropic Economic Index</p>
+  <div class="tags">
+    <span class="tag">61 个职业中类</span>
+    <span class="tag">91 个 SOC 中美对比职业</span>
+    <span class="tag">14,053 万城镇从业者</span>
+    <span class="tag">Spearman ρ 检验</span>
+  </div>
+</div>
+
+<!-- ── 发现一 ── -->
+<div class="finding">
+  <div class="finding-eyebrow">发现一 — 中美认知分歧</div>
+  <div class="finding-title">中国低估了服务类职业风险，高估了管理类职业风险</div>
+  <p class="finding-desc">
+    中国模型基于招聘 JD 任务匹配；Anthropic 数据来自真实 Claude 使用率。两套排名相关性 ρ = 0.385，差异显著。
+    <strong>翻译、前台、销售在中国排名靠后，在全球真实使用数据中却是最高危职业之一。</strong>
+  </p>
+  <div class="card">
+    <div class="card-label">中美职业危险度排名对比（排名越小 = 越危险）</div>
+
+    <div class="div-section-label blue">中国低估 — 全球认为危险</div>
+    <table class="div-table">
+      <thead><tr>
+        <th>职业</th><th class="c">中国排名</th><th class="c">全球排名</th><th class="c">差距</th><th>原因</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="t-name">前台 / 接待员</td><td class="t-cn">#75</td><td class="t-ant">#14</td><td class="t-delta up">+61</td><td class="t-note">信息传递工作已被 AI 大量接管</td></tr>
+        <tr><td class="t-name">翻译 / 口译员</td><td class="t-cn">#68</td><td class="t-ant">#15</td><td class="t-delta up">+53</td><td class="t-note">语言转换是 LLM 最强项之一</td></tr>
+        <tr><td class="t-name">零售销售员</td><td class="t-cn">#77</td><td class="t-ant">#26</td><td class="t-delta up">+51</td><td class="t-note">客户沟通文案 AI 渗透率高</td></tr>
+        <tr><td class="t-name">批发销售代表</td><td class="t-cn">#54</td><td class="t-ant">#4</td><td class="t-delta up">+50</td><td class="t-note">提案、邮件、报价材料大量 AI 辅助</td></tr>
+        <tr><td class="t-name">HR 专员</td><td class="t-cn">#55</td><td class="t-ant">#17</td><td class="t-delta up">+38</td><td class="t-note">招聘文案、JD 撰写被 AI 接管</td></tr>
+      </tbody>
+    </table>
+
+    <div class="div-section-label orange">中国高估 — 全球认为中等</div>
+    <table class="div-table">
+      <thead><tr>
+        <th>职业</th><th class="c">中国排名</th><th class="c">全球排名</th><th class="c">差距</th><th>原因</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="t-name">IT / 信息系统经理</td><td class="t-cn">#3</td><td class="t-ant">#51</td><td class="t-delta dn">−48</td><td class="t-note">JD 写满技术任务，实际决策不靠 AI</td></tr>
+        <tr><td class="t-name">广告 / 推广经理</td><td class="t-cn">#2</td><td class="t-ant">#46</td><td class="t-delta dn">−44</td><td class="t-note">管理类核心决策 AI 难替代</td></tr>
+        <tr><td class="t-name">CEO / 高级管理者</td><td class="t-cn">#28</td><td class="t-ant">#68</td><td class="t-delta dn">−40</td><td class="t-note">战略判断与关系维护超出 AI 能力边界</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>规律：</strong>16 个管理类职业平均高估 24.8 名；11 个销售类职业平均低估 25.9 名。中国 JD 文本无法捕捉"哪些任务已在被 AI 执行"的真实信号。
+    </div>
+  </div>
+</div>
+
+<!-- ── 发现二 ── -->
+<div class="finding">
+  <div class="finding-eyebrow">发现二 — 工资与暴露度</div>
+  <div class="finding-title">高薪职业 AI 暴露度更高（ρ = 0.53）</div>
+  <p class="finding-desc">
+    28 个独立 SOC 类别的 Spearman 相关系数 = 0.53，与 Anthropic 全球发现方向一致。
+    <strong>脑力知识型工作而非体力劳动，才是 AI 优先进入的领域。</strong>
+    例外：采矿业工资高但暴露度低（物理操作 AI 难替代）；行政文员工资中等但暴露极高（文书处理是 LLM 强项）。
+  </p>
+  <div class="card">
+    <div class="card-label">职业大类 — 中位年薪 vs AI 暴露指数（N=28 独立 SOC 类别）</div>
+    <canvas id="c-scatter"></canvas>
+    <p class="chart-note">
+      橙色 = 暴露度 &gt; 0.70（高危）&nbsp;·&nbsp; 浅橙 = 0.55–0.70（中等）&nbsp;·&nbsp; 灰色 = &lt; 0.55（低暴露）&nbsp;·&nbsp; 虚线为线性拟合趋势线
+    </p>
+  </div>
+</div>
+
+<!-- ── 发现三 ── -->
+<div class="finding">
+  <div class="finding-eyebrow">发现三 — 行业影响规模</div>
+  <div class="finding-title">制造业是规模最大的潜在冲击源，影响指数是 IT 业的 4.5 倍</div>
+  <p class="finding-desc">
+    <strong>影响规模指数 = 就业人数（万）&times; 暴露指数。</strong>
+    IT 业暴露度最高（0.79），但仅 530 万人；制造业暴露度中等（0.52），却有 3,577 万从业者——这是一种不会立刻替代、但持续渗透的慢冲击。
+  </p>
+  <div class="card">
+    <div class="card-label">各行业影响规模指数（就业人数万人 &times; 暴露指数）</div>
+    <div id="bars-impact" style="margin-top:4px"></div>
+    <div class="callout">数据口径：城镇非私营单位；采矿业（329万）及公共管理（1,986万）因无招聘平台覆盖未纳入。</div>
+  </div>
+</div>
+
+<!-- ── 发现四 & 五 ── -->
+<div class="grid-2" style="margin-bottom:40px">
+
+  <div>
+    <div class="finding-eyebrow">发现四 — 共识高危职业</div>
+    <div class="finding-title">12 个中美共识高危职业</div>
+    <p class="finding-desc">两套数据均排前 25%，置信度最高，<strong>全部为白领知识型岗位。</strong></p>
+    <div class="card">
+      <div class="consensus-grid" id="consensus-grid"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="finding-eyebrow">发现五 — 就业规模分布</div>
+    <div class="finding-title">68% 的从业者处于中低暴露带</div>
+    <p class="finding-desc">大多数人不会被立刻替代，<strong>但议价空间将持续被压缩。</strong></p>
+    <div class="card">
+      <div class="stack-wrap">
+        <div class="stack-bar">
+          <div class="stack-seg" style="width:7%;background:#c8621a"></div>
+          <div class="stack-seg" style="width:24.3%;background:#e8904a"></div>
+          <div class="stack-seg" style="width:33.7%;background:#f0b870"></div>
+          <div class="stack-seg" style="width:35%;background:#e0d0b0"></div>
+        </div>
+        <div class="stack-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:#c8621a"></span>极高 7%</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#e8904a"></span>高 24%</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#f0b870"></span>中 34%</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#e0d0b0"></span>低 35%</span>
+        </div>
+      </div>
+      <div class="emp-row">
+        <div class="emp-dot" style="background:#c8621a"></div>
+        <div class="emp-label">
+          <div class="emp-title">极高暴露（&gt;0.75）</div>
+          <div class="emp-desc">IT 服务、科学研究</div>
+        </div>
+        <div class="emp-num">981万</div>
+        <div class="emp-pct">7%</div>
+      </div>
+      <div class="emp-row">
+        <div class="emp-dot" style="background:#e8904a"></div>
+        <div class="emp-label">
+          <div class="emp-title">高暴露（0.65–0.75）</div>
+          <div class="emp-desc">金融、批发零售、教育</div>
+        </div>
+        <div class="emp-num">3,415万</div>
+        <div class="emp-pct">24%</div>
+      </div>
+      <div class="emp-row">
+        <div class="emp-dot" style="background:#f0b870"></div>
+        <div class="emp-label">
+          <div class="emp-title">中暴露（0.55–0.65）</div>
+          <div class="emp-desc">卫生、建筑、交通</div>
+        </div>
+        <div class="emp-num">4,730万</div>
+        <div class="emp-pct">34%</div>
+      </div>
+      <div class="emp-row">
+        <div class="emp-dot" style="background:#c8b898"></div>
+        <div class="emp-label">
+          <div class="emp-title">低暴露（0.40–0.55）</div>
+          <div class="emp-desc">制造业、餐饮服务</div>
+        </div>
+        <div class="emp-num">4,926万</div>
+        <div class="emp-pct">35%</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  数据来源：中国 LLM 暴露指数（基期 2018–2021）&nbsp;·&nbsp; 《中国劳动统计年鉴 2024》&nbsp;·&nbsp; Anthropic Economic Index（2026-01）<br>
+  所有结论为相关关系，非因果推断 &nbsp;·&nbsp; 城镇非私营单位口径 &nbsp;·&nbsp; 中美指数仅比较排名，不比较绝对数值
+</div>
+
+<script>
+// ── 散点图 + 趋势线 ──
+const occs = [
+  {x:9.53, y:0.810, lb:'IT/计算机',   ox:1,  oy:0},
+  {x:7.48, y:0.807, lb:'商业财务',    ox:-1, oy:0},
+  {x:7.97, y:0.759, lb:'法律',        ox:1,  oy:0},
+  {x:9.60, y:0.739, lb:'管理',        ox:1,  oy:0},
+  {x:7.55, y:0.734, lb:'媒体艺术',    ox:1,  oy:0},
+  {x:6.60, y:0.720, lb:'行政文员',    ox:-1, oy:0},
+  {x:5.68, y:0.704, lb:'教育',        ox:-1, oy:0},
+  {x:7.54, y:0.630, lb:'工程',        ox:1,  oy:0},
+  {x:5.16, y:0.609, lb:'销售',        ox:-1, oy:0},
+  {x:7.59, y:0.451, lb:'采矿',        ox:1,  oy:0},
+  {x:5.89, y:0.385, lb:'生产制造',    ox:1,  oy:0},
+  {x:5.96, y:0.275, lb:'交通运输',    ox:1,  oy:0},
+  {x:5.92, y:0.220, lb:'建筑',        ox:-1, oy:0},
+  {x:4.82, y:0.285, lb:'餐饮',        ox:-1, oy:0},
+];
+
+// Regression: y = -0.049 + 0.091x
+const slope = 0.0906, intercept = -0.0492;
+const trendLine = [
+  {x: 3.5,  y: intercept + slope * 3.5},
+  {x: 11.2, y: Math.min(0.95, intercept + slope * 11.2)},
+];
+
+const ptColors = occs.map(d =>
+  d.y >= 0.70 ? 'rgba(200,98,26,0.88)' :
+  d.y >= 0.55 ? 'rgba(220,155,65,0.80)' :
+  'rgba(170,155,130,0.75)'
+);
+
+const labelPlugin = {
+  id: 'scatterLabels',
+  afterDatasetsDraw(chart) {
+    const ctx = chart.ctx;
+    const meta = chart.getDatasetMeta(0);
+    ctx.save();
+    ctx.font = '11px -apple-system, "PingFang SC", sans-serif';
+    meta.data.forEach((pt, i) => {
+      const d = occs[i];
+      ctx.fillStyle = d.y >= 0.55 ? '#5a3010' : '#706050';
+      ctx.textAlign = d.ox > 0 ? 'left' : 'right';
+      ctx.fillText(d.lb, pt.x + (d.ox > 0 ? 9 : -9), pt.y + 4);
+    });
+    ctx.restore();
+  }
+};
+
+new Chart(document.getElementById('c-scatter'), {
+  type: 'scatter',
+  plugins: [labelPlugin],
+  data: {
+    datasets: [
+      {
+        type: 'scatter',
+        data: occs.map(d => ({x: d.x, y: d.y})),
+        backgroundColor: ptColors,
+        borderColor: ptColors,
+        pointRadius: 7, pointHoverRadius: 9, order: 1,
+      },
+      {
+        type: 'line',
+        data: trendLine,
+        borderColor: 'rgba(180,100,30,0.35)',
+        borderWidth: 1.5,
+        borderDash: [5, 4],
+        pointRadius: 0,
+        fill: false,
+        tension: 0,
+        order: 2,
+      }
+    ]
+  },
+  options: {
+    layout: { padding: { right: 16, top: 8 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        filter: item => item.datasetIndex === 0,
+        backgroundColor: '#fffaf4',
+        titleColor: '#c8621a',
+        bodyColor: '#5a4030',
+        borderColor: '#e8d0b0',
+        borderWidth: 1,
+        callbacks: {
+          label: ctx => {
+            const d = occs[ctx.dataIndex];
+            return `${d.lb}   年薪: ${d.x}万   暴露指数: ${d.y}`;
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: '年薪中位数（万元/年）', font:{size:11}, color:'#9e8870' },
+        grid: { color: 'rgba(0,0,0,0.04)' },
+        ticks: { color: '#9e8870', font:{size:11} },
+        min: 3.5, max: 11.5,
+      },
+      y: {
+        title: { display: true, text: 'AI 暴露指数', font:{size:11}, color:'#9e8870' },
+        min: 0.10, max: 0.95,
+        grid: { color: 'rgba(0,0,0,0.04)' },
+        ticks: { color: '#9e8870', font:{size:11} }
+      }
+    }
+  }
+});
+
+// ── 影响规模条形图（含分量注释）──
+const impactData = [
+  {name:'制造业',         sub:'3,577万人 × 0.52', val:1874, h:true},
+  {name:'教育',           sub:'1,940万人 × 0.66', val:1285, h:false},
+  {name:'建筑业',         sub:'1,638万人 × 0.62', val:1021, h:false},
+  {name:'卫生和社会工作', sub:'1,127万人 × 0.57', val:646,  h:false},
+  {name:'批发和零售业',   sub:'782万人 × 0.69',   val:539,  h:false},
+  {name:'金融业',         sub:'710万人 × 0.72',   val:513,  h:false},
+  {name:'交通运输/仓储/邮政', sub:'580万人 × 0.75', val:435, h:false},
+  {name:'信息技术服务业', sub:'530万人 × 0.79',   val:419,  h:false},
+];
+const MAX = 1874;
+const barsEl = document.getElementById('bars-impact');
+impactData.forEach(d => {
+  const pct = (d.val / MAX * 100).toFixed(1);
+  const el = document.createElement('div');
+  el.className = 'bar-row';
+  el.innerHTML = `
+    <div class="bar-meta">
+      <div>
+        <div class="bar-name${d.h ? ' h' : ''}">${d.name}</div>
+        <div class="bar-sub">${d.sub}</div>
+      </div>
+      <div class="bar-right">
+        <div class="bar-val">${d.val.toLocaleString()}</div>
+      </div>
+    </div>
+    <div class="bar-track">
+      <div class="bar-fill${d.h ? ' h' : ''}" style="width:${pct}%"></div>
+    </div>`;
+  barsEl.appendChild(el);
+});
+
+// ── 共识高危职业 ──
+const consensus = [
+  '数据库架构师','会计师 / 审计师',
+  '财务与投资分析师','软件QA工程师',
+  'Web 开发工程师','运筹学分析师',
+  '公关专员','市场调研分析师',
+  '平面设计师','网络系统管理员',
+  '财务经理','数据录入员',
+];
+const grid = document.getElementById('consensus-grid');
+consensus.forEach(name => {
+  const div = document.createElement('div');
+  div.className = 'consensus-item';
+  div.textContent = name;
+  grid.appendChild(div);
+});
+</script>
+</body>
+</html>
