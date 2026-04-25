@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Analysis EP02 | 东亚不是特例，它只是先掉下去了</title>
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --paper: #fffdf9;
+      --text: #2f2a24;
+      --muted: #75685a;
+      --line: #e8dfd2;
+      --accent: #c96d4b;
+      --accent-soft: #f3e1d8;
+      --accent-deep: #7b3f2e;
+      --code-bg: #f4eee7;
+      --shadow: 0 12px 40px rgba(85, 60, 36, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(201,109,75,0.10), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", sans-serif;
+      line-height: 1.92;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+    }
+
+    .article {
+      background: var(--paper);
+      border: 1px solid rgba(201, 184, 160, 0.45);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 40px 34px 56px;
+    }
+
+    .hero {
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      margin: 40px 0 18px;
+      font-size: 28px;
+      line-height: 1.4;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.28em;
+      width: 5px;
+      height: 1.2em;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--accent), #e6b89f);
+    }
+
+    h3 {
+      margin: 28px 0 12px;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #2d241c;
+    }
+
+    h4 {
+      margin: 22px 0 10px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #5f3c2f;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 17px;
+    }
+
+    strong {
+      color: #1d1611;
+      font-weight: 800;
+    }
+
+    a {
+      color: var(--accent-deep);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(123, 63, 46, 0.28);
+    }
+
+    ul, ol {
+      margin: 0 0 18px 1.4em;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      font-size: 17px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 30px 0;
+    }
+
+    blockquote {
+      margin: 18px 0 24px;
+      padding: 16px 18px;
+      background: #fcf7f1;
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      color: var(--muted);
+    }
+
+    code {
+      padding: 2px 7px;
+      border-radius: 8px;
+      background: var(--code-bg);
+      font-size: 0.92em;
+      color: #5f3c2f;
+    }
+
+    .table-wrap {
+      margin: 18px 0 24px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+    }
+
+    th, td {
+      padding: 14px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      vertical-align: top;
+    }
+
+    th {
+      background: #faf4ee;
+      color: #4a382d;
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .toc {
+      margin: 0 0 28px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fffaf5 0%, #fff 100%);
+      border: 1px solid var(--line);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .toc li {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    .video-placeholder {
+      margin: 22px 0 30px;
+      padding: 28px 22px;
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(201,109,75,0.10), rgba(123,63,46,0.08)),
+        #fff8f3;
+      border: 1px solid rgba(201,109,75,0.20);
+      text-align: center;
+    }
+
+    .video-icon {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #e09a79);
+      color: white;
+      font-size: 28px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(201,109,75,0.22);
+    }
+
+    .video-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .video-desc {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .footer-note {
+      margin-top: 34px;
+      padding-top: 20px;
+      border-top: 1px dashed var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 12px 40px;
+      }
+
+      .article {
+        padding: 26px 18px 34px;
+        border-radius: 18px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p, li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="article">
+      
+        <aside class="toc">
+          <div class="toc-title">文章导航</div>
+          <ul><li><a href='#本文结构'>本文结构</a></li><li><a href='#第一部分-成果展示'>第一部分：成果展示</a></li><li><a href='#第二部分-方法论'>第二部分：方法论</a></li><li><a href='#第三部分-如何复用我的-skill'>第三部分：如何复用我的 Skill</a></li><li><a href='#最后'>最后</a></li></ul>
+        </aside>
+        
+      <header class='hero'><div class='eyebrow'>Vibe Analysis</div><h1>Vibe Analysis EP02 | 东亚不是特例，它只是先掉下去了</h1></header>
+<p>前几天，我听了一期罗永浩和梁建章关于人口问题的对谈节目。</p>
+<p>一个人从长期趋势和普通人感知出发，一个人从人口经济学和国家竞争力出发。</p>
+<p>听完之后，我脑子里卡住了一个问题：</p>
+<p><strong>东亚到底是全球人口问题的例外，还是只是最先把问题演出来的地方？</strong></p>
+<p>如果按以前的习惯，我大概率会先去看几篇文章，再记几个数字，然后得到一个模糊但正确的判断：韩国很低，日本很低，中国也很低，东亚挺危险。</p>
+<p>但这次我不想停在“知道几个数字”这一步。</p>
+<p>我想把这件事看完整。</p>
+<p>于是我做了两件事：</p>
+<p>第一，让我的 <code>Hermes Agent</code> 去收集和整理数据； 第二，用我自己的 <code>Vibe Analysis</code> 技能链，把这个问题做成一张真正能讲故事的世界地图。</p>
+<p>结果比我预期快得多。</p>
+<p>大概 2 个小时，Hermes Agent 把国家级人口、生育率、城市化和区域历史资料都整理出来了。接着我用 Vibe Analysis 的流程，把它做成了一张可拖动时间轴、可点国家、可看城市穿透的交互地图，再顺手把文章主线也搭了出来。</p>
+<p>老实说，这次最让我兴奋的，不只是效率。</p>
+<p>而是它最后给出的洞察深度，<strong>明显超过了我原本对“快速分析”这件事的预期</strong>。</p>
+<p>它不是简单把数据画出来。</p>
+<p>它真的把一个本来很容易落入情绪化讨论的话题，重新拉回到了结构层面。</p>
+<hr>
+<h2 id='本文结构'>本文结构</h2>
+<p><strong>第一部分：成果展示</strong> ——4 条让我重新理解人口问题的发现</p>
+<p><strong>第二部分：方法论</strong> ——我如何用 Hermes Agent + Vibe Analysis，在很短时间内完成这次分析</p>
+<p><strong>第三部分：如何复用</strong> ——相比 EP01，我更新了世界地图 Skill，读者可以直接复用</p>
+<hr>
+<h2 id='第一部分-成果展示'>第一部分：成果展示</h2>
+<h3>一句话总结</h3>
+<p>我用 Hermes Agent + Vibe Analysis，在很短时间内完成了一次全球人口主题的可视化分析：</p>
+<ul><li>整理国家级人口、生育率、城市化与区域历史数据</li><li>构建 1960—2023 年全球总和生育率交互地图</li><li>输出一张适合录屏传播的 HTML 叙事地图</li></ul>
+<p>最后得到的核心判断是：</p>
+<p><strong>东亚不是低生育的例外，它只是最先掉下去、也掉得最深的那一块。</strong></p>
+
+                <div class="video-placeholder">
+                  <div class="video-icon">▶</div>
+                  <div class="video-title">【此处插入 40 秒视频】</div>
+                  <div class="video-desc"></div>
+                </div>
+                
+<p>&gt;</p>
+<blockquote>建议配文：<br>把时间轴从 1960 拉到 2023，你会看到“低生育”不是东亚孤例，而是一场全球同步发生的颜色迁移。</blockquote>
+<hr>
+<h3>发现 1：最吓人的不是低，而是回不去</h3>
+<p>很多人看到韩国 0.72，会本能地觉得，最危险的是“有国家跌得特别低”。</p>
+<p>但我做完地图以后，真正让我发凉的，不是最低值本身。</p>
+<p>而是另一件事：</p>
+<p><strong>跌破 1.5 之后，几乎没有国家真正回到 2.1 的人口更替水平。</strong></p>
+<p>我专门把那些曾经跌破 1.5、后来又有所回升的国家单独标了出来。</p>
+<p>比如：</p>
+<ul><li>捷克：1.14 → 1.70</li><li>瑞典：1.54 → 1.70</li><li>爱沙尼亚：1.36 → 1.60</li></ul>
+<p>看起来像在恢复，对吧？</p>
+<p>但问题是，它们都没有真正回去。</p>
+<p>这意味着 1.5 很可能不是一个普通阈值，而是一条单行道的入口。</p>
+<p>回升可以发生。</p>
+<p>逆转几乎没发生过。</p>
+<p>这也是我现在对很多生育政策讨论最大的保留：</p>
+<p>我们总是下意识地把“回升”理解成“终将回到正常”，但从全球数据看，现实远没有这么乐观。</p>
+<hr>
+<h3>发现 2：城市化比文化更冷酷</h3>
+<p>中文互联网谈低生育，最喜欢归因的几个词是：东亚文化、儒家传统、鸡娃、房价、内卷。</p>
+<p>这些都不是错。</p>
+<p>但如果把视角拉到全球，你会发现有一个变量，比这些词更稳定，也更冷酷。</p>
+<p>那就是城市化。</p>
+<p>地图上最直观的画面，是那些又大、又红的点，几乎扎堆出现在高度城市化地区。</p>
+<ul><li>韩国：城市化 82%，TFR 0.72</li><li>日本：城市化 92%，TFR 1.26</li><li>大量发达国家也都落在同一片低生育颜色里</li></ul>
+<p>真正有意思的是例外。</p>
+<p>比如以色列和蒙古。</p>
+<p>它们提醒我们：文化、宗教、社会结构当然仍然有作用，但在大多数国家层面，<strong>城市化率才是低生育最强的背景变量之一</strong>。</p>
+<p>换句话说，问题不只是“年轻人想不想生”。</p>
+<p>而是当一个社会从农村结构走向城市结构，从大家庭走向核心家庭，从低成本生活走向高流动、高教育、高居住成本生活时，生育这件事会被整套重新定价。</p>
+<p>这套定价机制，比单纯的文化解释更硬，也更难被短期政策逆转。</p>
+<hr>
+<h3>发现 3：韩国真正可怕的，不是 0.72，而是 0.72 来得太快</h3>
+<p>低生育国家并不是韩国独有。</p>
+<p>德国有过，日本有过，俄罗斯也有过。</p>
+<p>韩国真正让人不安的，不只是它现在最低。</p>
+<p>而是它跌到这个位置的速度，已经超出了工业化国家的常见历史经验。</p>
+<p>也就是说，它不是普通地下滑。</p>
+<p>它是加速下滑。</p>
+<p>很多人看 0.72，会把它当成一个静态数字。</p>
+<p>但地图真正厉害的地方在于，它会把这个数字重新变回一段历史速度。</p>
+<p>你拖着时间轴往前走，会发现它不是“突然变低”。</p>
+<p>它是一个社会在非常短的时间里，把自己推到了一个极端位置。</p>
+<p>这会带来什么？</p>
+<ul><li>劳动力收缩</li><li>代际扶养比恶化</li><li>教育、住房、就业和财政体系被反向重写</li></ul>
+<p>所以韩国不是一条“极端新闻”。</p>
+<p>它更像一个样本国家，提前把很多社会未来要面对的问题演了一遍。</p>
+<hr>
+<h3>发现 4：中国真正难讲的，不是 1.09，而是 1.09 后面那道代际断层</h3>
+<p>中国的人口问题，也常常被一个数字讲窄了。</p>
+<p>1.09。</p>
+<p>这个数字当然低，也当然重要。</p>
+<p>但如果你只盯着 1.09，看见的只是一个全国平均值。</p>
+<p>而真正复杂的地方，在它背后那条代际断层。</p>
+<p>一旦把全国数字、超大城市、代际差异放在一起看，你会发现：</p>
+<p>中国的问题不是“所有人一起往下掉”。</p>
+<p>而是不同代际正在以不同速度掉下去，最后由平均数把这些差异抹平。</p>
+<p>上海、北京这种超大城市的极低生育，很多人已经听麻了。</p>
+<p>但真正值得警惕的，不是“有几个地方特别低”。</p>
+<p>而是这种状态，正在从局部样本变成一整代人的现实背景。</p>
+<p>这意味着什么？</p>
+<p>意味着中国的问题，不能只用一句“年轻人不想生”解释。</p>
+<p>那句话太轻了。</p>
+<p>它像在描述一种偏好。</p>
+<p>但人口结构变化从来不是偏好问题那么简单。</p>
+<p>它是一列已经启动的慢车。</p>
+<p>等你意识到它往哪开的时候，很多车厢其实已经出站了。</p>
+<hr>
+<h3>这份分析为什么值得看</h3>
+<p>我觉得这次分析有价值，不只是因为图做得出来。</p>
+<p>更因为它的数据来源和推导逻辑都比较硬：</p>
+<div class='table-wrap'><table><thead><tr><th>数据</th><th>来源</th><th>作用</th></tr></thead><tbody><tr><td>国家级人口/城市化/生育率</td><td>World Bank 等公开数据</td><td>国家对比主表</td></tr><tr><td>城市与区域人口资料</td><td>citypopulation.de 等整理资料</td><td>城市穿透与区域叙事</td></tr><tr><td>交互地图时序</td><td>国家级 TFR 序列整理</td><td>时间轴演化</td></tr></tbody></table></div>
+<p>更重要的是，这次产出不是单个图，而是一条完整链路：</p>
+<p><strong>问题定义 → 数据收集 → 可视化表达 → 传播文案</strong></p>
+<p>这也是我越来越确定的一件事：</p>
+<p>AI 真正厉害的，不是单点替代某个分析动作，而是把原本分散在不同工具、不同角色、不同心智模式里的环节，压成一条连贯工作流。</p>
+<hr>
+<h2 id='第二部分-方法论'>第二部分：方法论</h2>
+<h3>这次为什么能做得这么快</h3>
+<p>如果按传统方式做这类主题，你通常会经历下面几个阶段：</p>
+<ol><li>找资料</li><li>看资料</li><li>自己记笔记</li><li>自己做图</li><li>再想怎么写</li></ol>
+<p>每一步都不算特别难，但加起来非常碎。</p>
+<p>而我这次做法刚好相反：</p>
+<p>先把问题问清楚，再让 Agent 和 Skill 链条往下跑。</p>
+<p>这次真正的起点，不是我打开 Excel，也不是我开始写图代码。</p>
+<p>而是我先把问题压成了一句清楚的话：</p>
+<blockquote>东亚到底是人口问题的特例，还是全球趋势中最早、最深的那一段？</blockquote>
+<p>有了这个问题，后面的事情就能被分工：</p>
+<ul><li><code>Hermes Agent</code> 负责收集、整理、归档资料</li><li><code>Vibe Analysis</code> 负责把问题转成分析任务，再把结果变成可传播输出</li></ul>
+<h3>我这次大概用了什么流程</h3>
+<h4>1）先让 Hermes Agent 收集数据</h4>
+<p>这一步我没有自己手动到处翻表。</p>
+<p>我让 Hermes Agent 去整理：</p>
+<ul><li>国家级人口与生育率资料</li><li>城市化与城市/区域历史数据</li><li>数据来源说明与审计说明</li></ul>
+<p>大概 2 个小时左右，基础资料就已经能用了。</p>
+<p>这一步给我的最大感受是：</p>
+<p><strong>以前做分析最容易卡在“资料还没准备好”，现在这个环节已经被大幅压缩了。</strong></p>
+<h4>2）再用 Vibe Analysis 把问题变成产物</h4>
+<p>有了数据之后，真正关键的不是“怎么画图”，而是“怎么讲这个问题”。</p>
+<p>这也是我一直觉得 Vibe Analysis 比单纯 Vibe Coding 更有意思的地方。</p>
+<p>它不是只帮你出一个产物。</p>
+<p>它会逼你先想清楚：</p>
+<ul><li>你到底想回答什么问题</li><li>哪个变量是主叙事</li><li>什么发现值得讲</li><li>什么表达适合传播</li></ul>
+<p>这次我在 EP01 的基础上，把技能链继续往前推了一步：</p>
+<ul><li><code>vibe-analysis-taskwriting</code>：把问题压成任务书</li><li><code>vibe-analysis-world-map</code>：构建世界地图和国家级叙事编码</li><li><code>warm-minimal-dashboard</code>：保证输出适合截图和传播</li></ul>
+<p>最后出来的不是单个图，而是：</p>
+<ul><li><code>dashboard.html</code></li><li><code>insights.md</code></li><li><code>report.md</code></li><li>公众号正文</li></ul>
+<p>这也是为什么我会说，这次的结果远超我的预期。</p>
+<p>不是因为它特别复杂。</p>
+<p>恰恰是因为它在很短时间里，把“效率高”和“洞察深”这两个通常互相冲突的东西，同时做到了。</p>
+<hr>
+<h2 id='第三部分-如何复用我的-skill'>第三部分：如何复用我的 Skill</h2>
+<p>如果你看过我 EP01 那篇《月薪4000的建筑工，比程序员更安全——我用数据验证了这件事》，你会发现一个很明显的变化：</p>
+<p>EP01 里，我主要验证的是<strong>职业风险与 AI 暴露度</strong>。</p>
+<p>到了 EP02，我把同一套思路扩展到了<strong>国家级世界地图分析</strong>。</p>
+<p>也就是说，相比 EP01，这次我专门把“世界地图构建”这块沉淀成了一个可以复用的 Skill。</p>
+<p>GitHub 地址在这里：</p>
+<p><strong><a href="https://github.com/adamsun2077-create/Vibe-Analysis-Skills" target="_blank" rel="noopener noreferrer">https://github.com/adamsun2077-create/Vibe-Analysis-Skills</a></strong></p>
+<p>这次 EP02 我补进去的关键 Skill 是：</p>
+<ul><li><code>vibe-analysis-world-map</code> —— 世界地图构建与叙事编码</li></ul>
+<p>它解决的不是单纯“画地图”。</p>
+<p>而是这类问题：</p>
+<ul><li>颜色看什么？</li><li>气泡大小看什么？</li><li>标签显示什么？</li><li>时间轴变化时，哪些视觉变量应该同步变化？</li><li>什么时候该用严格 GIS，什么时候该用拓扑叙事地图？</li></ul>
+<p>如果你以后要做这些题目：</p>
+<ul><li>全球人口地图</li><li>各国 GDP / 渗透率 / TFR / 城市化对比</li><li>适合社媒传播的世界分布图</li><li>带时间轴的国家级叙事可视化</li></ul>
+<p>这套 Skill 基本都可以直接改指标复用。</p>
+<p>除了新的地图 Skill，原来 EP01 那条分析链也还在：</p>
+<ul><li><code>vibe-analysis-taskwriting</code></li><li><code>data-quality-check</code></li><li><code>hypothesis-driven-analysis</code></li><li><code>warm-minimal-dashboard</code></li><li><code>mckinsey-analysis</code></li></ul>
+<p>也就是说，如果你愿意，你完全可以直接拿我现在的技能库，去复用这套流程：</p>
+<p><strong>先问一个像样的问题，再让 AI 帮你把资料、图和文案串起来。</strong></p>
+<hr>
+<h2 id='最后'>最后</h2>
+<p>我这次做完最深的感受，不是“AI 能帮我省很多时间”。</p>
+<p>而是：</p>
+<p><strong>AI 终于开始让我更愿意碰那些原本会嫌麻烦的大问题。</strong></p>
+<p>人口就是这种题目。</p>
+<p>它太大，太慢，太容易掉进情绪和立场里。</p>
+<p>所以大多数时候，我们最后只记住几个数字，或者几句熟悉的话。</p>
+<p>但当你真的把数据铺开，真的把时间轴拉长，真的把全球放在同一个画面里，你会发现：</p>
+<p>原来很多我们以为是“东亚特有”的东西，其实是现代社会共同要付的代价。</p>
+<p>东亚不是例外。</p>
+<p>它只是先掉下去了。</p>
+<p>如果你对这个方向有兴趣，也欢迎去看我开源出来的项目和 Skill。</p>
+<p>这次 EP02 的资料、地图、文章和 Skill 都已经整理进 GitHub：</p>
+<p><strong><a href="https://github.com/adamsun2077-create/Vibe-Analysis-Skills" target="_blank" rel="noopener noreferrer">https://github.com/adamsun2077-create/Vibe-Analysis-Skills</a></strong></p>
+<p>如果 EP01 是我在验证“AI 冲击谁的工作”，那 EP02 更像是在验证另一件事：</p>
+<p><strong>AI 不只能帮你分析职业和商业，它也能把一个原本很宏大、很抽象的人口议题，压缩成一张你真的看得懂、也愿意转发的地图。</strong></p>
+<hr>
+<p><strong>数据来源</strong>：World Bank、区域人口与城市化整理数据、国家级 TFR 时序整理 <strong>方法说明</strong>：Hermes Agent 负责资料收集与整理，Vibe Analysis 负责任务书、地图表达与内容输出 <strong>说明</strong>：所有结论为相关关系或结构性观察，不构成因果推断</p>
+      <div class="footer-note">
+        本页为单文件排版版 HTML，适合直接预览、截图、继续改文案，再同步到公众号编辑器。
+      </div>
+    </article>
+  </div>
+</body>
+</html>
