@@ -30,6 +30,7 @@
 |------|------|-----------|
 | [warm-minimal-dashboard](skills/warm-minimal-dashboard/SKILL.md) | 暖色极简风看板，适合社媒传播 | 暖色看板、图表生成 |
 | [dashboard-generator](skills/dashboard-generator/SKILL.md) | 结构化3步工作流生成仪表板 | 仪表板、看板设计、KPI体系 |
+| [vibe-analysis-world-map](skills/vibe-analysis-world-map/SKILL.md) | 世界地图构建与叙事编码 | 世界地图、气泡地图、拓扑地图、国别对比 |
 
 ---
 
@@ -42,7 +43,7 @@
 4. 质量验证    → data-quality-check
 5. 分析执行    → data-analyst + hypothesis-driven-analysis
 6. 商业洞察    → mckinsey-analysis
-7. 可视化输出  → warm-minimal-dashboard / dashboard-generator
+7. 可视化输出  → warm-minimal-dashboard / dashboard-generator / vibe-analysis-world-map
 ```
 
 ---
@@ -54,6 +55,7 @@
 | 项目 | 主题 | 状态 |
 |------|------|------|
 | [EP01](projects/ep01-ai-job-market/) | AI 薪资两极分化分析 | 已完成 |
+| [EP02](projects/ep02-fertility-earth/) | 全球生育率与人口结构叙事地图 | 已归档 |
 
 ---
 

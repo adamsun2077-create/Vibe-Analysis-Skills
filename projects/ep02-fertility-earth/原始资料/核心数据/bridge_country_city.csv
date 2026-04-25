@@ -1,0 +1,158 @@
+﻿Country,City_English_Name,City_Population,Country_Population_WB_2024,City_Share_of_Country_pct,Relationship_Type,Data_Source
+China,Canton,73600000,1408975000,5.22,Adm-Urb,citypopulation.de | World Bank
+China,Shanghai,42300000,1408975000,3.0,Adm-Urb,citypopulation.de | World Bank
+Japan,Tokyo,41300000,123975371,33.31,Aggl,citypopulation.de | World Bank
+India,Delhi,36900000,1450935791,2.54,Congl,citypopulation.de | World Bank
+Indonesia,Jakarta,29800000,283487931,10.51,Aggl,citypopulation.de | World Bank
+India,Bombay,28100000,1450935791,1.94,Congl,citypopulation.de | World Bank
+Philippines,Manila,27100000,115843670,23.39,Aggl,citypopulation.de | World Bank
+Mexico,Mexico City,25600000,130861007,19.56,CUA,citypopulation.de | World Bank
+Korea (South),Seoul,25400000,51751065,49.08,CUA,citypopulation.de | World Bank
+Bangladesh,Dacca,23700000,173562364,13.66,Aggl,citypopulation.de | World Bank
+Egypt,Cairo,23200000,116538258,19.91,Aggl,citypopulation.de | World Bank
+Brazil,São Paulo,22700000,211998573,10.71,CUA,citypopulation.de | World Bank
+United States of America,New York,22600000,340110988,6.64,CUA,citypopulation.de | World Bank
+Thailand,Bangkok,22400000,71668011,31.26,Aggl,citypopulation.de | World Bank
+Nigeria,Lagos,21900000,232679478,9.41,,citypopulation.de | World Bank
+China,Beijing,21800000,1408975000,1.55,Adm-Urb,citypopulation.de | World Bank
+Pakistan,Karachi,21800000,251269164,8.68,CUA,citypopulation.de | World Bank
+Russia,Moscow,19100000,143533851,13.31,Aggl,citypopulation.de | World Bank
+China,Chengtu,18300000,1408975000,1.3,Adm-Urb,citypopulation.de | World Bank
+India,Calcutta,18100000,1450935791,1.25,Congl,citypopulation.de | World Bank
+Japan,Osaka,17700000,123975371,14.28,Aggl,citypopulation.de | World Bank
+United States of America,Los Angeles,17400000,340110988,5.12,CUA,citypopulation.de | World Bank
+Iran,Tehran,17200000,91567738,18.78,Aggl,citypopulation.de | World Bank
+Argentina,Buenos Aires,17000000,45696159,37.2,CUA,citypopulation.de | World Bank
+Congo (Dem. Rep.),Kinshasa,16900000,109276265,15.47,City,citypopulation.de | World Bank
+Turkey,Istanbul,16200000,,,Aggl,citypopulation.de | World Bank
+China,Xiamen,15800000,1408975000,1.12,Adm-Urb,citypopulation.de | World Bank
+Great Britain,London,15400000,69226000,22.25,CUA,citypopulation.de | World Bank
+India,Bangalore,15300000,1450935791,1.05,Congl,citypopulation.de | World Bank
+South Africa,Johannesburg,15100000,,,CUA,citypopulation.de | World Bank
+Pakistan,Lahore,15000000,251269164,5.97,CUA,citypopulation.de | World Bank
+China,Hangchou,14700000,1408975000,1.04,Adm-Urb,citypopulation.de | World Bank
+Vietnam,Saigon,14700000,100987686,14.56,Aggl,citypopulation.de | World Bank
+China,Sian,13700000,1408975000,0.97,Adm-Urb,citypopulation.de | World Bank
+Brazil,Rio de Janeiro,13600000,211998573,6.42,CUA,citypopulation.de | World Bank
+India,Madras,13300000,1450935791,0.92,Aggl,citypopulation.de | World Bank
+China,Chungking,13200000,1408975000,0.94,Adm-Urb,citypopulation.de | World Bank
+China,Wuhan,12900000,1408975000,0.92,Adm-Urb,citypopulation.de | World Bank
+Peru,Lima,12200000,34217848,35.65,Aggl,citypopulation.de | World Bank
+India,Hyderabad,12100000,1450935791,0.83,Congl,citypopulation.de | World Bank
+China,Tientsin,11800000,1408975000,0.84,Adm-Urb,citypopulation.de | World Bank
+China,Changsha,11600000,1408975000,0.82,Adm-Urb,citypopulation.de | World Bank
+France,Paris,11600000,68551653,16.92,Congl,citypopulation.de | World Bank
+Colombia,Bogotá,10800000,52886363,20.42,Aggl,citypopulation.de | World Bank
+Germany,Rhine-Ruhr Area,10800000,83516593,12.93,CUA,citypopulation.de | World Bank
+Japan,Nagoya,10500000,123975371,8.47,Aggl,citypopulation.de | World Bank
+China,Zhengzhou,10500000,1408975000,0.75,Adm-Urb,citypopulation.de | World Bank
+Angola,Luanda,10400000,37885849,27.45,UA,citypopulation.de | World Bank
+India,Ahmedabad,10200000,1450935791,0.7,Aggl,citypopulation.de | World Bank
+Taiwan (Rep. of China),Taipei,10200000,,,Congl,citypopulation.de | World Bank
+United States of America,Chicago,9800000,340110988,2.88,CUA,citypopulation.de | World Bank
+Malaysia,Kuala Lumpur,9750000,35557673,27.42,Aggl,citypopulation.de | World Bank
+China,Nanking,9750000,1408975000,0.69,Adm-Urb,citypopulation.de | World Bank
+China,Shenyang,8950000,1408975000,0.64,Adm-Urb,citypopulation.de | World Bank
+United States of America,Washington,8800000,340110988,2.59,CUA,citypopulation.de | World Bank
+Chile,Santiago,8600000,19764771,43.51,CUA,citypopulation.de | World Bank
+India,Surat,8400000,1450935791,0.58,Aggl,citypopulation.de | World Bank
+Canada,Toronto,8300000,41288599,20.1,CUA,citypopulation.de | World Bank
+China,Hofei,0,1408975000,,Sousse,citypopulation.de | World Bank
+Nigeria,Ilorin,1190000,232679478,0.51,,citypopulation.de | World Bank
+Iraq,Kirkuk,1190000,46042015,2.58,Adm-Urb,citypopulation.de | World Bank
+Argentina,Mendoza,1190000,45696159,2.6,CUA,citypopulation.de | World Bank
+China,Zhaoqing,1190000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Turkmenistan,Ashgabat,1180000,7494498,15.74,Aggl,citypopulation.de | World Bank
+Nigeria,Sokoto,1180000,232679478,0.51,,citypopulation.de | World Bank
+India,Sholapur,1180000,1450935791,0.08,Aggl,citypopulation.de | World Bank
+France,Bordeaux,1170000,68551653,1.71,Congl,citypopulation.de | World Bank
+China,Lianyungang,1170000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Qujing,1170000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Russia,Saratov,1170000,143533851,0.82,Aggl,citypopulation.de | World Bank
+France,Toulouse,1170000,68551653,1.71,Congl,citypopulation.de | World Bank
+Colombia,Cúcuta,1160000,52886363,2.19,Aggl,citypopulation.de | World Bank
+Iran,Kermānshāh,1160000,91567738,1.27,City,citypopulation.de | World Bank
+United States of America,Richmond,1160000,340110988,0.34,CUA,citypopulation.de | World Bank
+Mexico,Saltillo,1160000,130861007,0.89,CUA,citypopulation.de | World Bank
+Japan,Kumamoto,1150000,123975371,0.93,Aggl,citypopulation.de | World Bank
+Morocco,Marrakesh,1150000,38081173,3.02,Mun-Urb,citypopulation.de | World Bank
+China,Shuyang,1150000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Congo (Dem. Rep.),Bukavu,1140000,109276265,1.04,City,citypopulation.de | World Bank
+Mexico,Cancún,1140000,130861007,0.87,CUA,citypopulation.de | World Bank
+Nigeria,Jos,1140000,232679478,0.49,,citypopulation.de | World Bank
+Turkey,Kayseri,1140000,,,Aggl,citypopulation.de | World Bank
+United States of America,Memphis,1140000,340110988,0.34,CUA,citypopulation.de | World Bank
+Burkina Faso,Bobo-Dioulasso,1130000,23548781,4.8,Aggl,citypopulation.de | World Bank
+Germany,Nuremberg,1130000,83516593,1.35,CUA,citypopulation.de | World Bank
+Russia,Omsk,1130000,143533851,0.79,Aggl,citypopulation.de | World Bank
+Russia,Voronezh,1130000,143533851,0.79,Aggl,citypopulation.de | World Bank
+India,Warangal,1130000,1450935791,0.08,Aggl,citypopulation.de | World Bank
+China,Yŏngkāng,1130000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Eritrea,Āsmera,1120000,3535603,31.68,City,citypopulation.de | World Bank
+Turkey,Diyarbakır,1120000,,,Aggl,citypopulation.de | World Bank
+China,Jiŭjiāng,1120000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Spain,Málaga,1120000,48848840,2.29,CUA,citypopulation.de | World Bank
+Indonesia,Pekanbaru,1120000,283487931,0.4,Aggl,citypopulation.de | World Bank
+Pakistan,Sargodha,1120000,251269164,0.45,UA,citypopulation.de | World Bank
+Japan,Shizuoka,1120000,123975371,0.9,Aggl,citypopulation.de | World Bank
+Argentina,Tucumán,1120000,45696159,2.45,CUA,citypopulation.de | World Bank
+China,Zhōukŏu,1120000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Beihai,1110000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+India,Dehra Dūn,1100000,1450935791,0.08,Aggl,citypopulation.de | World Bank
+China,Lángfāng,1100000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Shaoyang,1100000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Shiyan,1100000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Israel,Jerusalem,1100000,9974400,11.03,Aggl,citypopulation.de | World Bank
+Mexico,Chihuahua,1090000,130861007,0.83,CUA,citypopulation.de | World Bank
+China,Chúzhōu,1090000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Germany,Hanover,1090000,83516593,1.31,CUA,citypopulation.de | World Bank
+Jordan,Irbid,1090000,11552876,9.43,,citypopulation.de | World Bank
+Ukraine,Odessa,1090000,37860221,2.88,Aggl,citypopulation.de | World Bank
+Brazil,São José dos Campos,1090000,211998573,0.51,CUA,citypopulation.de | World Bank
+Pakistan,Siālkot,1090000,251269164,0.43,CUA,citypopulation.de | World Bank
+Germany,Bielefeld,1080000,83516593,1.29,CUA,citypopulation.de | World Bank
+China,Dongying,1080000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Héngshuĭ,1080000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Huludao,1080000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Tanzania,Zanzibar,1080000,68560157,1.58,Aggl,citypopulation.de | World Bank
+Nigeria,Zaria,1080000,232679478,0.46,,citypopulation.de | World Bank
+Saudi Arabia,Hofuf,1070000,35300280,3.03,Aggl,citypopulation.de | World Bank
+Iraq,Najaf,1070000,46042015,2.32,Adm-Urb,citypopulation.de | World Bank
+China,Guìgăng,1070000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+India,Calicut,1070000,1450935791,0.07,Aggl,citypopulation.de | World Bank
+Germany,Leipzig,1070000,83516593,1.28,CUA,citypopulation.de | World Bank
+Turkey,Mersin,1070000,,,Aggl,citypopulation.de | World Bank
+Mexico,Morelia,1070000,130861007,0.82,CUA,citypopulation.de | World Bank
+Russia,Perm,1070000,143533851,0.75,Aggl,citypopulation.de | World Bank
+Korea (South),Ulsan,1070000,51751065,2.07,CUA,citypopulation.de | World Bank
+Chile,Valparaíso,1070000,19764771,5.41,CUA,citypopulation.de | World Bank
+Russia,Volgograd,1070000,143533851,0.75,Aggl,citypopulation.de | World Bank
+China,Cāngzhōu,1060000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+China,Liuyang,1060000,1408975000,0.08,Adm-Urb,citypopulation.de | World Bank
+Italy,Padua,1060000,58952704,1.8,CUA,citypopulation.de | World Bank
+Congo (Dem. Rep.),Goma,1050000,109276265,0.96,City,citypopulation.de | World Bank
+United States of America,Greenville,1050000,340110988,0.31,CUA,citypopulation.de | World Bank
+Saudi Arabia,Khamis Mushait,1050000,35300280,2.97,Aggl,citypopulation.de | World Bank
+Brazil,Londrina,1050000,211998573,0.5,CUA,citypopulation.de | World Bank
+China,Panjin,1050000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+Brazil,Teresina,1050000,211998573,0.5,CUA,citypopulation.de | World Bank
+United States of America,El Paso,1040000,340110988,0.31,CUA,citypopulation.de | World Bank
+Nigeria,Enugu,1040000,232679478,0.45,,citypopulation.de | World Bank
+China,Liupanshui,1040000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+United States of America,Louisville,1040000,340110988,0.31,CUA,citypopulation.de | World Bank
+India,Puducherry,1040000,1450935791,0.07,Congl,citypopulation.de | World Bank
+United States of America,Tucson,1040000,340110988,0.31,CUA,citypopulation.de | World Bank
+China,Línfén,1030000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+China,Qiqihar,1030000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+China,Suzhou,1030000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+China,Tengzhou,1030000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+Mexico,Culiacán,1020000,130861007,0.78,CUA,citypopulation.de | World Bank
+Great Britain,Bristol,1010000,69226000,1.46,CUA,citypopulation.de | World Bank
+France,Nice,1010000,68551653,1.47,Congl,citypopulation.de | World Bank
+Germany,Aix-la-Chapelle,1000000,83516593,1.2,CUA,citypopulation.de | World Bank
+Pakistan,Bahāwalpur,1000000,251269164,0.4,UA,citypopulation.de | World Bank
+Korea (South),Changwon,1000000,51751065,1.93,CUA,citypopulation.de | World Bank
+Brazil,Cuiabá,1000000,211998573,0.47,CUA,citypopulation.de | World Bank
+United States of America,Fresno,1000000,340110988,0.29,CUA,citypopulation.de | World Bank
+China,Yixing,1000000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank
+China,Zigong,1000000,1408975000,0.07,Adm-Urb,citypopulation.de | World Bank

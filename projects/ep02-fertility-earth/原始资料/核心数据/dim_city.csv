@@ -1,0 +1,158 @@
+﻿City_Rank,City_Native_Name,City_English_Name,Country,Population,Growth_Rate_pct,Area_km2,Status,Remark,Data_Source,Reference_Date
+1,Guăngzhōu,Canton,China,73600000,3.3,,Adm-Urb,"Northern Pearl River Delta; incl. Dōngguān, Fóshān, Huìzhōu, Jiāngmén, Shēnzhèn, Zhōngshān",citypopulation.de,2026-01-01
+2,Shànghăi,Shanghai,China,42300000,1.9,,Adm-Urb,"incl. Chángshú, Chángzhōu, Sūzhōu, Wúxī",citypopulation.de,2026-01-01
+3,Tōkyō,Tokyo,Japan,41300000,.4,16217.51,Aggl,"incl. Chiba, Kawasaki, Maebashi, Sagamihara, Saitama, Utsunomiya, Yokohama",citypopulation.de,2026-01-01
+4,Delhi,Delhi,India,36900000,3.3,,Congl,"incl. Faridabad, Ghaziabad, Gurgaon",citypopulation.de,2026-01-01
+5,Jakarta,Jakarta,Indonesia,29800000,1.1,3310.95,Aggl,"incl. Bekasi, Bogor, Depok, Tangerang, Tangerang Selatan",citypopulation.de,2026-01-01
+6,Mumbai,Bombay,India,28100000,1.9,,Congl,"incl. Bhiwandi, Kalyan, Thane, Ulhasnagar, Vasai-Virar",citypopulation.de,2026-01-01
+7,Manila,Manila,Philippines,27100000,1.4,2730.34,Aggl,"incl. Kalookan, Quezon City",citypopulation.de,2026-01-01
+8,Ciudad de México,Mexico City,Mexico,25600000,.9,5809.8,CUA,"incl. Nezahualcóyotl, Ecatepec, Naucalpan",citypopulation.de,2026-01-01
+9,Seoul,Seoul,Korea (South),25400000,.55,4045.67,CUA,"incl. Bucheon, Goyang, Incheon, Seongnam, Suweon",citypopulation.de,2026-01-01
+10,Dhaka,Dacca,Bangladesh,23700000,2.6,1845.67,Aggl,,citypopulation.de,2026-01-01
+11,Al-Qāhirah,Cairo,Egypt,23200000,1.8,2733.87,Aggl,"incl. Al-Jīzah [Giza], Shubrā al-Khaymah",citypopulation.de,2026-01-01
+12,São Paulo,São Paulo,Brazil,22700000,.7,3191.15,CUA,incl. Guarulhos,citypopulation.de,2026-01-01
+13,New York,New York,United States of America,22600000,-.1,14904.74,CUA,"incl. Bridgeport, Newark, New Haven",citypopulation.de,2026-01-01
+14,Krung Thep,Bangkok,Thailand,22400000,3,,Aggl,,citypopulation.de,2026-01-01
+15,Lagos,Lagos,Nigeria,21900000,3,,,(population of low reliability),citypopulation.de,2026-01-01
+16,Bĕijīng,Beijing,China,21800000,1.5,,Adm-Urb,,citypopulation.de,2026-01-01
+16,Karāchi,Karachi,Pakistan,21800000,4,,CUA,,citypopulation.de,2026-01-01
+18,Moskva,Moscow,Russia,19100000,.8,,Aggl,,citypopulation.de,2026-01-01
+19,Chéngdū,Chengtu,China,18300000,4,,Adm-Urb,,citypopulation.de,2026-01-01
+20,Kolkata,Calcutta,India,18100000,1.2,,Congl,incl. Haora,citypopulation.de,2026-01-01
+21,Ōsaka,Osaka,Japan,17700000,-.05,7489.31,Aggl,"incl. Himeji, Kōbe, Kyōto, Sakai",citypopulation.de,2026-01-01
+22,Los Angeles,Los Angeles,United States of America,17400000,-.15,8339.41,CUA,"incl. Anaheim, Riverside",citypopulation.de,2026-01-01
+23,Tehrān,Tehran,Iran,17200000,2,,Aggl,incl. Karaj,citypopulation.de,2026-01-01
+24,Buenos Aires,Buenos Aires,Argentina,17000000,1,,CUA,"incl. San Justo, La Plata",citypopulation.de,2026-01-01
+25,Kinshasa,Kinshasa,Congo (Dem. Rep.),16900000,4,,City,(population of low reliability),citypopulation.de,2026-01-01
+26,İstanbul,Istanbul,Turkey,16200000,1,,Aggl,incl. Gebze,citypopulation.de,2026-01-01
+27,Xiàmén,Xiamen,China,15800000,3,,Adm-Urb,"incl. Jìnjiāng, Quánzhōu, Pútián",citypopulation.de,2026-01-01
+28,London,London,Great Britain,15400000,1,5211.51,CUA,,citypopulation.de,2026-01-01
+29,Bengaluru,Bangalore,India,15300000,3.8,,Congl,,citypopulation.de,2026-01-01
+30,Johannesburg,Johannesburg,South Africa,15100000,1.7,6479.52,CUA,"incl. East Rand, Evaton, Pretoria, Soshanguve, Soweto, Vereeniging, West Rand",citypopulation.de,2026-01-01
+31,Lāhore,Lahore,Pakistan,15000000,2.7,,CUA,,citypopulation.de,2026-01-01
+32,Hángzhōu,Hangchou,China,14700000,4.2,,Adm-Urb,incl. Shàoxīng,citypopulation.de,2026-01-01
+32,Thành Phố Hồ Chí Minh,Saigon,Vietnam,14700000,2.9,2061.68,Aggl,incl. Biên Hòa,citypopulation.de,2026-01-01
+34,Xī'ān,Sian,China,13700000,4.2,,Adm-Urb,incl. Xiányáng,citypopulation.de,2026-01-01
+35,Rio de Janeiro,Rio de Janeiro,Brazil,13600000,.45,3999.21,CUA,"incl. Nova Iguaçu, São Gonçalo",citypopulation.de,2026-01-01
+36,Chennai,Madras,India,13300000,2.8,932.47,Aggl,,citypopulation.de,2026-01-01
+37,Chóngqìng,Chungking,China,13200000,3.7,,Adm-Urb,,citypopulation.de,2026-01-01
+38,Wŭhàn,Wuhan,China,12900000,3,,Adm-Urb,,citypopulation.de,2026-01-01
+39,Lima,Lima,Peru,12200000,2,,Aggl,,citypopulation.de,2026-01-01
+40,Hyderābād,Hyderabad,India,12100000,2.9,,Congl,,citypopulation.de,2026-01-01
+41,Tiānjīn,Tientsin,China,11800000,1.3,,Adm-Urb,,citypopulation.de,2026-01-01
+42,Chángshā,Changsha,China,11600000,4,,Adm-Urb,"incl. Xiāngtán, Zhūzhōu",citypopulation.de,2026-01-01
+42,Paris,Paris,France,11600000,.4,3751.41,Congl,,citypopulation.de,2026-01-01
+44,Bogotá,Bogotá,Colombia,10800000,2,3615.4,Aggl,,citypopulation.de,2026-01-01
+44,Rhein-Ruhr,Rhine-Ruhr Area,Germany,10800000,.25,3467.91,CUA,"incl. Köln, Düsseldorf, Dortmund, Essen, Duisburg, Bonn, Wuppertal, Mönchengladbach",citypopulation.de,2026-01-01
+46,Nagoya,Nagoya,Japan,10500000,.05,9475.28,Aggl,,citypopulation.de,2026-01-01
+46,Zhèngzhōu,Zhengzhou,China,10500000,4.3,,Adm-Urb,,citypopulation.de,2026-01-01
+48,Luanda,Luanda,Angola,10400000,3.5,,UA,,citypopulation.de,2026-01-01
+49,Ahmadābād,Ahmedabad,India,10200000,3.1,1011,Aggl,,citypopulation.de,2026-01-01
+49,Taibei,Taipei,Taiwan (Rep. of China),10200000,1,3069,Congl,"incl. Taoyuan, New Taipei City (Xinbei)",citypopulation.de,2026-01-01
+51,Chicago,Chicago,United States of America,9800000,-.1,8301.22,CUA,,citypopulation.de,2026-01-01
+52,Kuala Lumpur,Kuala Lumpur,Malaysia,9750000,2.3,,Aggl,incl. Klang,citypopulation.de,2026-01-01
+52,Nánjīng,Nanking,China,9750000,2.5,,Adm-Urb,incl. Mă'ānshān,citypopulation.de,2026-01-01
+54,Shĕnyáng,Shenyang,China,8950000,1.6,,Adm-Urb,incl. Fŭshùn,citypopulation.de,2026-01-01
+55,Washington,Washington,United States of America,8800000,.5,7622.89,CUA,incl. Baltimore,citypopulation.de,2026-01-01
+56,Santiago,Santiago,Chile,8600000,2.3,,CUA,,citypopulation.de,2026-01-01
+57,Sūrat,Surat,India,8400000,4,411.27,Aggl,,citypopulation.de,2026-01-01
+58,Toronto,Toronto,Canada,8300000,2.5,2538.5,CUA,incl. Hamilton,citypopulation.de,2026-01-01
+59,Héféi,Hofei,China,,4,,Sousse,Tunisia,citypopulation.de,2026-01-01
+555,Ilorin,Ilorin,Nigeria,1190000,2.6,,,(population of low reliability),citypopulation.de,2026-01-01
+555,Kirkūk,Kirkuk,Iraq,1190000,2.5,,Adm-Urb,,citypopulation.de,2026-01-01
+555,Mendoza,Mendoza,Argentina,1190000,1.1,,CUA,,citypopulation.de,2026-01-01
+555,Zhàoqìng,Zhaoqing,China,1190000,2.8,,Adm-Urb,,citypopulation.de,2026-01-01
+559,Aşgabat,Ashgabat,Turkmenistan,1180000,2.5,,Aggl,,citypopulation.de,2026-01-01
+559,Sokoto,Sokoto,Nigeria,1180000,3.4,,,(population of low reliability),citypopulation.de,2026-01-01
+559,Solāpur,Sholapur,India,1180000,1.3,178.57,Aggl,,citypopulation.de,2026-01-01
+562,Bordeaux,Bordeaux,France,1170000,1.25,1603.02,Congl,,citypopulation.de,2026-01-01
+562,Liányúngăng,Lianyungang,China,1170000,1.8,,Adm-Urb,,citypopulation.de,2026-01-01
+562,Qŭjìng,Qujing,China,1170000,3.6,,Adm-Urb,,citypopulation.de,2026-01-01
+562,Saratov,Saratov,Russia,1170000,-.5,,Aggl,,citypopulation.de,2026-01-01
+562,Toulouse,Toulouse,France,1170000,1.35,941.92,Congl,,citypopulation.de,2026-01-01
+567,Cúcuta,Cúcuta,Colombia,1160000,3,1352.6,Aggl,,citypopulation.de,2026-01-01
+567,Kermānshāh,Kermānshāh,Iran,1160000,2.2,,City,,citypopulation.de,2026-01-01
+567,Richmond,Richmond,United States of America,1160000,1,1482.84,CUA,,citypopulation.de,2026-01-01
+567,Saltillo,Saltillo,Mexico,1160000,2.35,359.12,CUA,,citypopulation.de,2026-01-01
+571,Kumamoto,Kumamoto,Japan,1150000,-.05,1638.34,Aggl,,citypopulation.de,2026-01-01
+571,Marrakech,Marrakesh,Morocco,1150000,1.5,,Mun-Urb,,citypopulation.de,2026-01-01
+571,Shùyáng,Shuyang,China,1150000,3,,Adm-Urb,,citypopulation.de,2026-01-01
+574,Bukavu,Bukavu,Congo (Dem. Rep.),1140000,3.5,,City,(population of low reliability),citypopulation.de,2026-01-01
+574,Cancún,Cancún,Mexico,1140000,3.4,283.48,CUA,,citypopulation.de,2026-01-01
+574,Jos,Jos,Nigeria,1140000,2.5,,,(population of low reliability),citypopulation.de,2026-01-01
+574,Kayseri,Kayseri,Turkey,1140000,1,,Aggl,,citypopulation.de,2026-01-01
+574,Memphis,Memphis,United States of America,1140000,-.1,1579.05,CUA,,citypopulation.de,2026-01-01
+579,Bobo-Dioulasso,Bobo-Dioulasso,Burkina Faso,1130000,3.3,,Aggl,,citypopulation.de,2026-01-01
+579,Nürnberg,Nuremberg,Germany,1130000,.5,331.67,CUA,incl. Erlangen,citypopulation.de,2026-01-01
+579,Omsk,Omsk,Russia,1130000,-.65,,Aggl,,citypopulation.de,2026-01-01
+579,Voronež,Voronezh,Russia,1130000,-.4,,Aggl,,citypopulation.de,2026-01-01
+579,Warangal,Warangal,India,1130000,2.65,242.42,Aggl,,citypopulation.de,2026-01-01
+579,Yŏngkāng,Yŏngkāng,China,1130000,4,,Adm-Urb,,citypopulation.de,2026-01-01
+585,Āsmera,Āsmera,Eritrea,1120000,3,,City,(population of low reliability),citypopulation.de,2026-01-01
+585,Diyarbakır,Diyarbakır,Turkey,1120000,1.5,,Aggl,,citypopulation.de,2026-01-01
+585,Jiŭjiāng,Jiŭjiāng,China,1120000,3,,Adm-Urb,,citypopulation.de,2026-01-01
+585,Málaga,Málaga,Spain,1120000,1,,CUA,,citypopulation.de,2026-01-01
+585,Pekanbaru,Pekanbaru,Indonesia,1120000,1,560.15,Aggl,,citypopulation.de,2026-01-01
+585,Sargodha,Sargodha,Pakistan,1120000,4,,UA,,citypopulation.de,2026-01-01
+585,Shizuoka,Shizuoka,Japan,1120000,-.35,2124.83,Aggl,,citypopulation.de,2026-01-01
+585,Tucumán,Tucumán,Argentina,1120000,1.45,,CUA,,citypopulation.de,2026-01-01
+585,Zhōukŏu,Zhōukŏu,China,1120000,4.2,,Adm-Urb,,citypopulation.de,2026-01-01
+594,Bĕihăi,Beihai,China,1110000,3,,Adm-Urb,,citypopulation.de,2026-01-01
+595,Dehra Dūn,Dehra Dūn,India,1100000,2.9,125.22,Aggl,,citypopulation.de,2026-01-01
+595,Lángfāng,Lángfāng,China,1100000,4.3,,Adm-Urb,,citypopulation.de,2026-01-01
+595,Shàoyáng,Shaoyang,China,1100000,2.4,,Adm-Urb,,citypopulation.de,2026-01-01
+595,Shíyàn,Shiyan,China,1100000,2.8,,Adm-Urb,,citypopulation.de,2026-01-01
+595,Yerushalayim,Jerusalem,Israel,1100000,1.75,142.31,Aggl,,citypopulation.de,2026-01-01
+600,Chihuahua,Chihuahua,Mexico,1090000,1.55,493.08,CUA,,citypopulation.de,2026-01-01
+600,Chúzhōu,Chúzhōu,China,1090000,4,,Adm-Urb,,citypopulation.de,2026-01-01
+600,Hannover,Hanover,Germany,1090000,.4,365.93,CUA,incl. Hildesheim,citypopulation.de,2026-01-01
+600,Irbid,Irbid,Jordan,1090000,2.4,,,,citypopulation.de,2026-01-01
+600,Odesa,Odessa,Ukraine,1090000,-.4,,Aggl,(without considering the impacts of the Russian invasion),citypopulation.de,2026-01-01
+600,São José dos Campos,São José dos Campos,Brazil,1090000,1.2,385.39,CUA,,citypopulation.de,2026-01-01
+600,Siālkot,Siālkot,Pakistan,1090000,4,,CUA,,citypopulation.de,2026-01-01
+607,Bielefeld,Bielefeld,Germany,1080000,.15,869.81,CUA,"incl. Güterloh, Herford",citypopulation.de,2026-01-01
+607,Dōngyíng,Dongying,China,1080000,2.2,,Adm-Urb,,citypopulation.de,2026-01-01
+607,Héngshuĭ,Héngshuĭ,China,1080000,4,,Adm-Urb,,citypopulation.de,2026-01-01
+607,Húlúdăo,Huludao,China,1080000,1.8,,Adm-Urb,,citypopulation.de,2026-01-01
+607,Zanzibar,Zanzibar,Tanzania,1080000,4.3,227.59,Aggl,,citypopulation.de,2026-01-01
+607,Zaria,Zaria,Nigeria,1080000,2.5,,,(population of low reliability),citypopulation.de,2026-01-01
+613,Al-Hufūf,Hofuf,Saudi Arabia,1070000,.9,,Aggl,,citypopulation.de,2026-01-01
+613,An-Najaf,Najaf,Iraq,1070000,2.1,,Adm-Urb,,citypopulation.de,2026-01-01
+613,Guìgăng,Guìgăng,China,1070000,3,,Adm-Urb,,citypopulation.de,2026-01-01
+613,Kozhikode,Calicut,India,1070000,.8,,Aggl,,citypopulation.de,2026-01-01
+613,Leipzig,Leipzig,Germany,1070000,.5,388.12,CUA,incl. Halle,citypopulation.de,2026-01-01
+613,Mersin,Mersin,Turkey,1070000,1.3,,Aggl,,citypopulation.de,2026-01-01
+613,Morelia,Morelia,Mexico,1070000,1.8,412.92,CUA,,citypopulation.de,2026-01-01
+613,Perm',Perm,Russia,1070000,-.2,,Aggl,,citypopulation.de,2026-01-01
+613,Ulsan,Ulsan,Korea (South),1070000,-.55,651.91,CUA,,citypopulation.de,2026-01-01
+613,Valparaíso,Valparaíso,Chile,1070000,.9,,CUA,,citypopulation.de,2026-01-01
+613,Volgograd,Volgograd,Russia,1070000,-.45,,Aggl,,citypopulation.de,2026-01-01
+624,Cāngzhōu,Cāngzhōu,China,1060000,3.5,,Adm-Urb,,citypopulation.de,2026-01-01
+624,Liúyáng,Liuyang,China,1060000,3.6,,Adm-Urb,,citypopulation.de,2026-01-01
+624,Padova,Padua,Italy,1060000,.1,496.43,CUA,incl. Mestre,citypopulation.de,2026-01-01
+627,Goma,Goma,Congo (Dem. Rep.),1050000,3.5,,City,(population of low reliability),citypopulation.de,2026-01-01
+627,Greenville,Greenville,United States of America,1050000,1.7,2270.56,CUA,,citypopulation.de,2026-01-01
+627,Khamīs Mushaīṭ,Khamis Mushait,Saudi Arabia,1050000,2.3,,Aggl,,citypopulation.de,2026-01-01
+627,Londrina,Londrina,Brazil,1050000,1.05,414.22,CUA,,citypopulation.de,2026-01-01
+627,Pánjĭn,Panjin,China,1050000,1.3,,Adm-Urb,,citypopulation.de,2026-01-01
+627,Teresina,Teresina,Brazil,1050000,.85,391.85,CUA,,citypopulation.de,2026-01-01
+633,El Paso,El Paso,United States of America,1040000,.3,1033.81,CUA,incl. Las Cruces,citypopulation.de,2026-01-01
+633,Enugu,Enugu,Nigeria,1040000,2.4,,,(population of low reliability),citypopulation.de,2026-01-01
+633,Liùpánshuĭ,Liupanshui,China,1040000,4,,Adm-Urb,,citypopulation.de,2026-01-01
+633,Louisville,Louisville,United States of America,1040000,.55,1392.85,CUA,,citypopulation.de,2026-01-01
+633,Puducherry,Puducherry,India,1040000,2.65,,Congl,,citypopulation.de,2026-01-01
+633,Tucson,Tucson,United States of America,1040000,.8,1203.73,CUA,,citypopulation.de,2026-01-01
+639,Línfén,Línfén,China,1030000,1.6,,Adm-Urb,,citypopulation.de,2026-01-01
+639,Qíqíhā'ĕr,Qiqihar,China,1030000,0,,Adm-Urb,,citypopulation.de,2026-01-01
+639,Sùzhōu,Suzhou,China,1030000,2.2,,Adm-Urb,,citypopulation.de,2026-01-01
+639,Téngzhōu,Tengzhou,China,1030000,1.8,,Adm-Urb,,citypopulation.de,2026-01-01
+643,Culiacán,Culiacán,Mexico,1020000,1.6,406.57,CUA,,citypopulation.de,2026-01-01
+644,Bristol,Bristol,Great Britain,1010000,1.1,452.57,CUA,,citypopulation.de,2026-01-01
+644,Nice,Nice,France,1010000,.6,749.02,Congl,,citypopulation.de,2026-01-01
+646,Aachen,Aix-la-Chapelle,Germany,1000000,.3,335.16,CUA,incl. Heerlen (Netherlands),citypopulation.de,2026-01-01
+646,Bahāwalpur,Bahāwalpur,Pakistan,1000000,2.9,,UA,,citypopulation.de,2026-01-01
+646,Changwon,Changwon,Korea (South),1000000,-.6,468.56,CUA,,citypopulation.de,2026-01-01
+646,Cuiabá,Cuiabá,Brazil,1000000,1.6,446.16,CUA,,citypopulation.de,2026-01-01
+646,Fresno,Fresno,United States of America,1000000,.5,702.8,CUA,,citypopulation.de,2026-01-01
+646,Yíxīng,Yixing,China,1000000,2.3,,Adm-Urb,,citypopulation.de,2026-01-01
+646,Zìgòng,Zigong,China,1000000,2.7,,Adm-Urb,,citypopulation.de,2026-01-01
